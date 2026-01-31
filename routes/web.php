@@ -7,9 +7,7 @@ use App\Http\Controllers\DocumentController;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [DocumentController::class, 'index']);
 
 
 // Route::post('/documents', [DocumentController::class, 'store']);

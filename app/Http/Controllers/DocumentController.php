@@ -9,6 +9,16 @@ use Illuminate\Support\Facades\Storage;
 
 class DocumentController extends Controller
 {
+
+
+
+    public function index(){
+        $documents = Document::latest()->get();
+        return view('documents.index', compact('documents'));
+    }
+
+
+
     public function store(Request $request)
     {
         $request->validate([
